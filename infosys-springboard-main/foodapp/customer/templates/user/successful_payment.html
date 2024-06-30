@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <style>
+        .jumbotron {
+            background-color: #f8f9fa;
+            border-radius: 0.3rem;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .jumbotron .btn {
+            padding: 0.75rem 1.25rem;
+            font-size: 1.25rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Thank You!</h1>
+            <p class="lead">Your payment was successful.</p>
+            <hr class="my-4">
+            <p>Order Number: {{ order_number }}</p>
+            <p>Total Amount Paid: ₹{{ total_price }}</p>
+            <p>We have sent a confirmation email to {{ user.email }}.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Go to Home</a>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

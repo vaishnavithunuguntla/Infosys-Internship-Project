@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurants in {{ city_name }} | Restaurant Guide</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/restaurant_list.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb py-2">
+            <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'restaurant_list' city %}">{{ city }}</a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="page-container">
+
+        {% for restaurant in restaurants %}
+        <div class="restaurant-card restaurant-id-{{ restaurant.id }} row">
+            <div class="image-container col-md-4">
+                <img src="{% static 'img/restua.avif' %}" alt="image_restua">
+            </div>
+            <div class="content-container col-md-8">
+                <div class="detail-container">
+                    <div class="restaurant-name">{{ restaurant.name }}</div>
+                    <div class="restaurant-details">{{ restaurant.address }}</div>
+                    <div class="restaurant-details">+91 {{ restaurant.contact }}</div>
+                </div>
+                <div class="row no-gutterst">
+                    <div class="button-container col-6 d-flex justify-content-star">
+                        {# <a href="{% url 'restaurant_detail' restaurant.id %}" class="btn btn-primary">View</a> #}
+                        <a href="{% url 'restaurant_detail' restaurant.id %}" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="no-restaurant-container">
+            <p>No restaurants to list</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

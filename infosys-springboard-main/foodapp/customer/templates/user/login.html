@@ -1,0 +1,46 @@
+{% extends "user/base.html" %}
+{% block content %}
+<style>
+    body {
+        background-color: #90AEAD;
+        font-size: 14px;
+    }
+    .card {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #AFDDE5;
+    }
+    @media (max-width: 768px) {
+        .card {
+            max-width: 100%;
+        }
+    }
+    .forgot-password {
+        font-size: 12px;
+        text-align: right;
+    }
+</style>
+
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card p-4 shadow p-3 mb-5 bg-body-tertiary rounded">
+                <h2 class="text-center mb-4">Login</h2>
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="email" class="form-control border-secondary" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control border-secondary" name="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <div class="signup-link text-center mt-3">
+                    <p>New user? <a href="{% url 'register' %}">Signup here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

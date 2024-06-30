@@ -1,0 +1,305 @@
+body {
+    background-color: #e7edf3;
+}
+
+.carousel img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.restaurant-summary {
+    padding: 44px;
+    background-color: #f2f5f6;
+}
+
+.restaurant-amenities,
+.restaurant-rating {
+    background-color: #fcfaf7;
+}
+
+.star-container i {
+    color: #EA322E;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.interested-container {
+    text-align: center;
+    padding-right: 42px;
+}
+.header {
+    background-color: #e3f2fd;
+    z-index: 100;
+    font-size: 13px;
+    font-weight: bold;
+}
+.breadcrumb {
+    background-color: #aed4e3;
+    font-size: 13px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+    .interested-container {
+        padding-right: 0px;
+    }
+}
+
+.interested-container i {
+    color: #EA322E;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.interested-text {
+    font-size: 10px;
+}
+.page-container-property {
+
+    max-width: 800px;
+    /* padding: 80px 24px; */
+    margin: auto;
+}
+.detail-container {
+    padding-bottom: 10px;
+}
+
+.restaurant-name {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .restaurant-name {
+        font-size: 24px;
+    }
+}
+
+.restaurant-address {
+    color: #6f6f6f;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.restaurant-gender img {
+    width: 40px;
+}
+
+.rent-container {
+    display: flex;
+    align-items: center;
+}
+
+.rent {
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .rent {
+        font-size: 18px;
+    }
+}
+
+.rent-unit {
+    color: #6f6f6f;
+    font-size: 12px;
+}
+
+.button-container .btn {
+    font-size: 14px;
+    border-radius: 0px;
+    width: 140px;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .restaurant-amenities .row>div {
+        padding-bottom: 24px;
+    }
+}
+
+.restaurant-food {
+    padding: 40px;
+    background-color: #e8ecf1;
+}
+
+.restaurant-food-items {
+    padding: 10px;
+}
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    /* height: 100%; */
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 150px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+.card-text {
+    color: #666;
+    font-size: 14px;
+}
+.price {
+    font-weight: bold;
+    color: #333;
+    margin-top: auto;
+}
+
+
+.property-about {
+    background-color: #f2f5f6;
+    padding: 44px;
+}
+
+.amenity-container {
+    margin: 8px 0px;
+}
+
+.amenity-container img {
+    height: 20px;
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+.rating-criteria {
+    margin: 28px 0px;
+}
+
+.rating-criteria-icon {
+    width: 14px;
+}
+
+.rating-criteria-text {
+    margin-left: 8px;
+}
+
+.rating-criteria-star-container {
+    margin-top: -2px;
+}
+
+.rating-criteria-star-container i {
+    color: #66C2BD;
+    font-size: 12px;
+}
+
+.rating-circle {
+    background-color: #66C2BD;
+    color: white;
+    text-align: center;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding-top: 32px;
+    margin: auto;
+}
+
+.total-rating {
+    font-size: 40px;
+}
+
+.rating-circle-star-container {
+    font-size: 12px;
+}
+
+.testimonial-block {
+    background-color: #fcfaf7;
+    padding: 0px 160px 24px;
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-block {
+        padding: 0px 24px 24px;
+    }
+}
+
+.testimonial-image-container {
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: -40px;
+}
+
+.testimonial-text {
+    color: #777777;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-text i {
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.testimonial-text p {
+    text-indent: 20px;
+}
+
+.testimonial-name {
+    color: #2F2E2E;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.footer {
+    background-color: #333333;
+    font-size: 13px;
+}
+
+.footer-container {
+    padding: 24px;
+}
+
+.footer-cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-city {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    .footer-city {
+        width: 100%;
+    }
+}
+
+.footer-city a {
+    color: #ffffff;
+}
+
+.footer-copyright {
+    color: #a9a9a9;
+    text-align: center;
+    padding-top: 24px;
+}
